@@ -5,6 +5,8 @@ const botones = document.querySelectorAll(".btn-agregar");
 
 botones.forEach(function (boton) {
   boton.addEventListener("click", function () {
-    alert("¡Producto agregado al carrito!");
+    const producto = boton.closest(".producto");
+    const nombreProducto = producto.querySelector("h3").textContent;
+    alert(nombreProducto + " agregado al carrito!");
   });
 });
